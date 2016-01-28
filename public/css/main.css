@@ -1,0 +1,727 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*************************************************************
+                        STYLES
+*************************************************************/
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato';
+    background-image: url("../img/noise.png");
+    background-color: #f1f1f1;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+p {
+    padding: 10px 0;
+}
+
+code {
+    padding: 4px 8px;
+    background: #fff;
+    color: #905;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 14px;
+    white-space: nowrap;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+a:hover {
+    color: #905;
+    /*border-bottom: 1px dotted #905;*/
+}
+
+/****************************************
+                UNIVERSAL
+****************************************/
+
+.nf {
+    float: none;
+}
+
+
+@media only screen and (min-device-width : 280px) {
+    .container {
+        max-width: 1080px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    #blog #posts {
+        float: left;
+        width: 75%;
+    }
+
+    #about {
+        padding: 40px 600px;
+    }
+}
+
+
+/*****************************************
+               BLOG INDEX
+*****************************************/
+
+#header {
+    height: 50px;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+#navigation {
+    position: fixed;
+    width: 100%;
+    /*padding: 15px;*/
+    background: url('../img/noise.png'), linear-gradient(hsl(200, 10%, 20%), hsla(200, 10%, 20%, .9));
+    font-family: 'Lato', sans-serif;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    overflow: hidden;
+}
+
+#navigation h1#title{
+    color: #e4e4e4;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    float: left;
+}
+
+#navigation #searchbox {
+    float: right;
+    width: 25%;
+    padding: 5px;
+    overflow: hidden;
+}
+
+#navigation #searchbox #search {
+    font-size: 16px;
+    padding: 8px 13px;
+    border-radius: 20px;
+    border:0;
+    float: right;
+    width: 100px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#navigation #searchbox #search:focus {
+    width: 300px;
+}
+
+#navigation ul {
+    width: 70%;
+    float: left;
+}
+
+#navigation ul li {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    display: inline-block;
+    /*padding: 15px;*/
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#navigation ul li a {
+    color: #eee;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+#navigation ul li:hover {
+    background-image: url('../img/noise.png');
+    background-color: #905;
+}
+
+#navigation div.sm {
+    padding: 5px;
+    float: right;
+}
+
+#navigation div.sm img {
+    opacity: 0.5;
+}
+
+#navigation div.sm img:hover {
+    opacity: 1;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+
+@media screen and (max-width: 860px) {  
+
+}
+
+#main {
+    overflow: hidden;
+    background-image: url("../img/noise.png");
+    background-color: #f1f1f1;
+    margin-top: 55px;
+}
+
+/*********** BLOG **********/
+
+#blog {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #444;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+#blog a {
+    text-decoration: none;
+    color: slategray;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#blog a:hover {
+    color: #905;
+}
+
+#blog #posts {
+/*    float: left;
+    width: 70%;*/
+}
+
+
+
+#blog #entry {
+    margin: 0;
+    padding: 30px 20px ;
+    background: #fff url('../img/noise.png');
+    /*box-shadow: 0px 2px 6px #999;*/
+    overflow: hidden;
+    border-bottom: 1px dotted #ccc;
+}
+
+#blog #entry h1 {
+    font-size: 1.5em;
+    margin: 0 0 20px 0;
+    padding: 0 0 15px;
+    color: #8f8576;
+    display: block;
+    /*border-bottom: 1px dotted #ccc;*/
+    font-family: 'Merriweather', 'Georgia', serif; 
+    font-weight: 700;
+}
+
+#blog #entry .entry_content hr {
+    border-bottom: 1px dotted #ccc;
+    border: 0;
+    display: block;
+}
+
+#blog #entry .entry_content h1 a:hover {
+    border-bottom: none;
+}
+
+#blog #entry .entry_content a.readmore {
+    border-bottom: 1px dotted #000;
+    font-size: 1.4em;
+}
+
+#blog #entry span.author {
+    font-style: italic;
+    float: left;
+    color: #ccc;
+}
+
+#blog #entry span.comments {
+    float: right;
+}
+
+#blog #prevnext {
+    margin: 25px 0;
+    overflow: hidden;
+}
+
+#blog span.prev {
+    float: left;
+    width: 30%;
+}
+
+#blog span.next {
+    text-align: right;
+    float: right;
+    width: 30%;
+}
+/********* SIDE *********/
+
+#side {
+    float: right;
+    width: 25%;
+    /*padding-top: 20px;*/
+    /*background: #fff url('../img/noise.png');*/
+    /*box-shadow: 0px 2px 6px #999;*/
+    /*margin-right: 5px;*/
+    margin-bottom: 20px;
+}
+
+#side #sam {
+    color: #e4e4e4;
+    margin: 0 0 50px 0;
+    padding: 20px 20px ;
+    background: slategray url('../img/noise.png');
+}
+
+#side #sam #bio {
+    margin-bottom: 20px;
+}
+
+#side #sam #bio h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+
+#side #sam #bio span.sam  {
+    background: url('../img/sam.png');
+    width: 210px;
+    height: 210px;
+    text-indent: -99999px;
+    display: block;
+    margin: 5px auto 10px;
+}
+
+#sidewrap h2 {
+    font-family: 'Merriweather', 'Georgia', serif; 
+    font-weight: 700;
+    display: block;
+    padding-left: 20px;
+    font-size: 18px;  
+}
+
+#sidewrap p.quote, #side #sam p.quote {
+    /*padding: 15px;*/
+    font-size: 12px;
+    font-style: italic;
+}
+
+#recentposts ul,
+#buddies ul,
+#archive ul {
+    margin: 10px 0 40px;
+}
+
+#recentposts ul li,
+#buddies ul li,{
+    display: block;
+
+}
+
+#recentposts ul li:first-child,
+#buddies ul li:first-child {
+    border-top: 1px dotted #ccc;
+}
+
+#buddies h2{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#recentposts ul li a,
+#buddies ul li a,
+#archive ul li a {
+    color: #fff;
+    display: block;
+    padding: 5px 20px;
+    border-bottom: 1px dotted #ccc;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+#recentposts ul li a:hover,
+#buddies ul li a:hover,
+#archive ul li a:hover {
+    background-image: url('../img/noise.png');
+    background-color: #905;
+    color: #fff;
+}
+
+#archive ul li {
+    font-weight: 700;
+}
+
+#archive ul li ul {
+    margin: 0;
+    /*padding-left: 20px;*/
+}
+
+#archive ul li ul li {
+    font-weight: 400;
+}
+
+#archive ul li ul li a {
+    padding-left: 40px;
+}
+
+/********* comments *********/
+
+#comments {
+    background-image: url('../img/noise.png');
+    background-color: #e4e4e4;
+    padding: 30px;
+    /*box-shadow: 0px 2px 6px #999;*/
+    margin-bottom: 25px;
+}
+
+#comments h2 {
+    font-size: 20px;
+    font-family: 'Merriweather', 'Georgia', serif; 
+    font-weight: 700;
+}
+
+
+#commentform form {
+    padding: 20px;
+    margin-top: 24px;
+}
+
+#commentform form label {
+    min-width: 150px;
+    display: inline-block;
+    padding: 10px;
+}
+
+#commentform form input,
+#commentform form textarea {
+    padding: 7px;
+    font-size: 18px;
+    outline: none;
+    border: 0;
+    min-width: 300px;
+    background-image: url('../img/noise.png');
+    background-color: #e4e4e4;
+    border-bottom: 1px dotted #999;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#commentform form textarea {
+    margin-top: 15px;
+    width: 95%;
+    height: 200px;
+}
+
+#commentform form input:focus,
+#commentform form textarea:focus {
+    background-color: #ccc;
+    background-image: url('../img/noise.png');
+}
+
+#commentform form button {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    font-size: 18px;
+}
+
+
+#commentmsg {
+    background: #B6F2CD;
+    color: #000;
+    margin: 25px 0;
+    padding: 15px;
+    border: 5px solid #84E0A7;
+}
+
+/** individual comment **/
+
+#comment {
+    margin: 40px 0;
+}
+
+#comment span.author {
+    font-family: "Merriweather", "Georgia", serif;
+    font-weight: 700;
+}
+
+#comment span.date {
+    font-size: 12px;
+    font-style: italic;
+    color: #ccc;
+    padding-top: 20px;
+    display: block;
+}
+
+.bubble {
+    position: relative;
+    padding: 15px;
+    margin: 1em 0 3em;
+    color: #000;
+    background: url('../img/noise.png') hsl(0, 100%, 100%);
+    /*box-shadow: 0px 2px 6px #999;*/
+}
+
+.bubble:after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 10px;
+    border-width: 0 15px 15px;
+    border-color: #fff transparent;
+    border-style: solid;
+    width: 0;
+}
+
+/********** ARCHIVE **********/
+
+h1.archive {
+    font-size: 1.8em;
+    margin: 25px 5px;
+    font-weight: 600;
+}
+
+
+/********** ABOUT ************/
+
+#yoda {
+    padding: 20px 20px 20px 0;
+/*    float: left;*/
+    margin: 0 auto;
+    display: block;
+}
+
+#theblog {
+    padding: 20px 0 20px 20px;
+    /*float: right;*/
+    margin: 0 auto;
+    display: block;
+}
+
+#about, #aboutblog {
+    background: #f1f1f1 url('../img/noise.png');
+    padding: 40px 10px;
+    color: #444;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 22px;
+    overflow: hidden;
+    margin-top: 55px;
+}
+
+#about h1, #aboutblog h1 {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    font-family: "Merriweather", Georgia, serif;
+    margin: 0 auto;
+    display: block;
+    padding: 20px 0;
+}
+
+
+
+
+
+
+/******* CONTACT ******/
+
+.msgsent {
+    width: 600px;
+    padding: 15px;
+    margin: 0 auto 25px;
+    background: #BBF99E;
+}
+
+#contact {
+    margin: 200px 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+#contactform {
+    width: 600px;
+    /*background: url('../img/noise.png') hsl(24, 20%, 95%);*/
+    padding: 40px;
+    margin: 0 auto;
+}
+
+#contactform h1 {
+    font-size: 3em;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+#contactform form {
+    margin: 20px 0;
+}
+
+#contactform form input,
+#contactform form textarea {
+    width:580px;
+    padding: 10px;
+    font-size: 1.3em;
+    font-family: 'Open Sans', sans-serif;
+    background: #fff url('../img/noise.png');
+    margin: 10px 0;
+    border: 0;
+}
+
+#contactform form textarea {
+    height: 200px;
+}
+
+#contactform form input:focus,
+#contactform form textarea:focus {
+    background: #444 url('../img/noise.png');
+    outline: none;
+    color: #fff;
+}
+
+#contactform form button {
+    padding: 15px;
+    background: #444;
+    color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#contactform span.error {
+    color: red;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+/****** FOOTER *******/
+
+#footer {
+    background-image: url('../img/noise.png');
+    background-color: #ccc;
+    color: #000;
+    padding: 15px;
+    font-size: 16px;
+    border-top: 1px solid #999;
+}
+
+/*****************************************
+                LOGIN
+*****************************************/
+
+#login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-left: -131px;     
+    margin-top:  -137px; 
+    background: #f1f1f1;
+}
+
+#login table tr td {
+    padding: 10px 0;
+}
+
+#login form input,
+#login form button {
+    width: 180px;
+    background: #444;
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#login form button {
+    width: 50px;
+    background: #000;
+    float: right;
+    display: block;
+}

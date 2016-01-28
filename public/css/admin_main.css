@@ -1,0 +1,388 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*************************************************************
+                        STYLES
+*************************************************************/
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #fff;
+    font-family: Georgia;
+    font-size: 12px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #888;
+}
+
+a:hover, a:active {
+    color: #000;
+}
+
+strong {
+    font-weight: bold;
+}
+
+input, textarea, button {
+    font-family: Georgia;
+}
+
+.error {
+    color: red;
+    display: block;
+    margin-top: 15px;
+}
+
+.success {
+    color: #70cc02;
+    display: block;
+    margin-top: 15px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+li.selected {
+    background: #000 !important;
+}
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.noauth {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    width: 400px;
+    margin-left: -231px;
+    margin-top:  -137px;
+    background: #f1f1f1;
+    font-size: 1.4em;
+    line-height: 2em;
+    text-align: center;
+}
+
+.topnav {
+    background: #444;
+    color: #ccc;
+    padding: 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #343434;
+}
+
+.welcome {
+    font-size: 1.2em;
+    margin-left: 50px;
+    float: left;
+}
+
+.welcome a {
+    margin-left: 100px; 
+    color: #ccc;
+}
+
+a.button {
+    margin: 30px auto;
+    display: block;
+    background: #666;
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+a.button:hover {
+    background: #000;
+}
+
+hr.sep {
+    border: 0;
+    margin: 35px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+#main_wrapper {
+    clear:both;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 190px;
+    float: left;
+    padding: 0;
+    height: 100vh;
+    background: #4f4f4f;
+    border-right: 1px solid #777777;
+}
+
+.main_content {
+    background: #e9e8e8;
+    height: 100%;
+    margin-left: 190px;
+    padding: 20px 30px 0 30px;
+}
+
+ul#sidemenu {
+    /*margin-top: 25px;*/
+}
+
+ul#sidemenu li a {
+    padding: 15px;
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.3em;
+    border-bottom: 1px solid #444444 ;
+    border-top: 1px solid #616161;
+}
+
+ul#sidemenu li a:hover {
+    background: #656565;
+}
+
+ul#sidemenu li ul li {
+    background: #464545;
+}
+ul#sidemenu li ul li a {
+    padding: 10px 10px 10px 25px;
+    color: #b9b9b9;
+}
+
+.main_content h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    color: #3f3f3f;
+}
+
+.main_content h2 {
+    font-size: 2em;
+    font-style: italic;
+    font-weight: 500;
+}
+
+a.btn {
+    padding: 10px 15px;
+    background: #d9d9d9;
+    border-right: 1px solid #c6c6c6;
+    border-bottom: 1px solid #c6c6c6;
+    color: #000;
+    font-size: 1.5em;
+}
+
+
+/***********************************************
+                POSTS PAGE
+***********************************************/
+#posts-table {
+
+}
+
+#posts-table table,
+#comments-table table {
+    border-collapse: separate;
+    width: 100%;
+    margin: 25px 0;
+    border: 1px solid #c3c3c3;
+    background: #f5f5f5;
+    line-height: 2em;
+}
+
+#posts-table table tr td,
+#posts-table table thead th,
+#comments-table table tr td,
+#comments-table table thead th {
+    padding: 15px;
+}
+
+#posts-table table thead th,
+#comments-table table thead th {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+    background: #c3c3c3;
+}
+
+#posts-table table tr td,
+#comments-table table tr td {
+    font-size: 1.3em;
+    border-top: 1px solid#ccc;
+}
+
+#posts-table table thead th:first-child {
+    width: 8%;
+}
+
+#posts-table table thead th:nth-child(2) {
+    width: 20%;
+}
+
+#posts-table table thead th:nth-child(3) {
+    width: 44%;
+}
+
+#post {
+    margin: 25px 0;
+    width: 70%;
+}
+
+#post input.title {
+    width: 100%;
+    padding: 15px 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1.5em;
+    font-family: Georgia;
+}
+
+#post input.date {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1.5em;
+}
+
+#post textarea.content {
+    width: 100%;
+    padding: 15px;
+    min-height: 400px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-top: 15px;
+    font-size: 1.3em;
+}
+
+#comments-table form button {
+/*    border: 0;
+    background: none;
+    padding: 0;
+    font-size: 16px;
+    color: #888;
+    margin: 0;*/
+    display: block;
+}
+
+#comments-table form button.comment:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+
+button.publish,
+button.draft,
+button.submit {
+    padding: 15px;
+    background: #444;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+}
+
+button.draft {
+    float: right;
+}
+
+/**************************************************
+                ACCOUNT PAGE
+**************************************************/
+
+#account, #chgpw {
+    width: 70%;
+    overflow: hidden;
+    font-size: 1.5em;
+}
+
+#account h3, #chgpw h3 {
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 15px 0;
+    color: #999;
+    font-style: italic;
+}
+
+#account form input,
+#chgpw form input {
+    padding: 10px;
+    min-width: 250px;
+    font-size: 1em;
+}
+
+#account form label,
+#chgpw form label {
+    min-width: 150px;
+    display: inline-block;
+}
+
+table.newpassword {
+    margin-top: 15px;
+}
+
+table.newpassword h3 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 15px;
+}
