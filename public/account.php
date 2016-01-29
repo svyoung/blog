@@ -17,7 +17,7 @@ get_adminheader();
 
     $adminname = $user['name'];
     $email = $user['email'];
-    $username = $user['username'];
+    $username = $user['username']; 
 
 ?>
 
