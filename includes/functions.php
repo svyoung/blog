@@ -1,8 +1,4 @@
 <?php
-// define("DB_HOST_DB_NAME", "mysql:host=db540015709.db.1and1.com;dbname=db540015709");
-// define("USERNAME", "dbo540015709");
-// define("PASSWORD", "Freshstart1!");
-
 define("DB_HOST_DB_NAME", "mysql:host=localhost;dbname=blog");
 define("USERNAME", "root");
 define("PASSWORD", "");
